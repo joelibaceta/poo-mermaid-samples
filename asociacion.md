@@ -3,7 +3,7 @@ class Student {
     String name;
     Teacher teacher; // Asociación con la clase Teacher
 
-    void displayTecherInfo() {
+    void displayTeacherInfo() {
         System.out.println("Assigned Teacher: " + teacher.name);
     }
 }
@@ -16,6 +16,7 @@ class Teacher {
 classDiagram
     class Student {
         +String name
+        +void displayTeacherInfo()
     }
     class Teacher {
         +String name
