@@ -30,5 +30,9 @@ classDiagram
     class Engine {
         +String type
     }
+    class Seat {
+        +String type
+    }
     Car *-- Engine : composition
+    Car *-- Seat : composition
 ```
