@@ -1,10 +1,10 @@
 ```java
-class Classroom {
-    String roomNumber;
-    List<Student> students; // Agregación con la clase Student
+class Student {
+    String name;
+    Teacher teacher; // Asociación con la clase Teacher
 }
 
-class Student {
+class Teacher {
     String name;
 }
 ```
