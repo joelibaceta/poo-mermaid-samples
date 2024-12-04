@@ -30,7 +30,7 @@ classDiagram
 
 ```java
 class Person {
-    String name;
+    private String name;
 
     Person(String name) {
         this.name = name;
@@ -38,16 +38,22 @@ class Person {
 }
 
 class Car {
-    String model;
-    Person owner;
+    private String model;
+    private Person owner;
 
     Car(String model, Person owner) {
+        if (owner == null) {
+            throw new IllegalArgumentException("Owner is required");
+        }
+        if (model == null || model.isEmpty()) {
+            throw new IllegalArgumentException("Model is required");
+        }
         this.model = model;
         this.owner = owner;
     }
 
     void displayOwner() {
-        System.out.println(model + " is owned by " + owner.name);
+        System.out.println(model + " is owned by " + owner.getName());
     }
 }
 
